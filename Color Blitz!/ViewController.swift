@@ -7,13 +7,46 @@
 //
 
 import UIKit
+import SpriteKit
+import Skillz
+
+
 
 class ViewController: UIViewController {
+    
+    
+
+    var skillz: Skillz!
+
+    
+    var animate = false
+    var animateCompleting = false
+    var animationPending = false
+
+    
+    @IBOutlet weak var revolvingButton:UIButton!
+    @IBOutlet weak var controlButton:UIButton!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        skillz = Skillz.skillzInstance()
+
+        
     }
+    
+    
+    @IBAction func startGame(){
+        
+        skillz.launch()
+
+    }
+    
+    
+  
+    
+
 
 
 }

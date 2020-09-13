@@ -1,0 +1,16 @@
+PODS:
+  - Skillz (15.0.35)
+
+DEPENDENCIES:
+  - Skillz
+
+SPEC REPOS:
+  trunk:
+    - Skillz
+
+SPEC CHECKSUMS:
+  Skillz: a747ca54780f2f5df9726e5448d85f868d8b9e1c
+
+PODFILE CHECKSUM: 8463bece4411b26d778e6ed1be0f127c34243c6e
+
+COCOAPODS: 1.9.3

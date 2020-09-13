@@ -3,29 +3,54 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B5509FE92F49A40A03DD850 /* Pods_Color_Blitz_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819B482C745B50BD158E27BF /* Pods_Color_Blitz_.framework */; };
 		7C03F95F250646B400782EE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03F95E250646B400782EE5 /* AppDelegate.swift */; };
-		7C03F961250646B400782EE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03F960250646B400782EE5 /* SceneDelegate.swift */; };
 		7C03F963250646B400782EE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03F962250646B400782EE5 /* ViewController.swift */; };
 		7C03F966250646B400782EE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C03F964250646B400782EE5 /* Main.storyboard */; };
 		7C03F969250646B400782EE5 /* Color_Blitz_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C03F967250646B400782EE5 /* Color_Blitz_.xcdatamodeld */; };
 		7C03F96B250646B500782EE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C03F96A250646B500782EE5 /* Assets.xcassets */; };
 		7C03F96E250646B500782EE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C03F96C250646B500782EE5 /* LaunchScreen.storyboard */; };
+		7C03F9792506617C00782EE5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03F9782506617C00782EE5 /* GameScene.swift */; };
+		7C03F97B2506657800782EE5 /* ColorBlitzScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03F97A2506657800782EE5 /* ColorBlitzScene.swift */; };
+		7C76E7CE25090D78005BCDCA /* AGSpriteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C76E7CC25090D77005BCDCA /* AGSpriteButton.m */; };
+		7C76E7D9250929DB005BCDCA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C76E7D8250929DB005BCDCA /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7C76E7D325091F22005BCDCA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		019334267E5CD6A27D43ADF1 /* Pods-Color Blitz!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color Blitz!.debug.xcconfig"; path = "Target Support Files/Pods-Color Blitz!/Pods-Color Blitz!.debug.xcconfig"; sourceTree = "<group>"; };
 		7C03F95B250646B400782EE5 /* Color Blitz!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Blitz!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C03F95E250646B400782EE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C03F960250646B400782EE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7C03F962250646B400782EE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7C03F965250646B400782EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C03F968250646B400782EE5 /* Color_Blitz_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Color_Blitz_.xcdatamodel; sourceTree = "<group>"; };
 		7C03F96A250646B500782EE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C03F96D250646B500782EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C03F96F250646B500782EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C03F9782506617C00782EE5 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		7C03F97A2506657800782EE5 /* ColorBlitzScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBlitzScene.swift; sourceTree = "<group>"; };
+		7C76E7CB25090D76005BCDCA /* Color Blitz!-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Color Blitz!-Bridging-Header.h"; sourceTree = "<group>"; };
+		7C76E7CC25090D77005BCDCA /* AGSpriteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGSpriteButton.m; sourceTree = "<group>"; };
+		7C76E7CD25090D78005BCDCA /* AGSpriteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGSpriteButton.h; sourceTree = "<group>"; };
+		7C76E7D8250929DB005BCDCA /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		819B482C745B50BD158E27BF /* Pods_Color_Blitz_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Color_Blitz_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F71E8F33CA213E9364990F /* Pods-Color Blitz!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color Blitz!.release.xcconfig"; path = "Target Support Files/Pods-Color Blitz!/Pods-Color Blitz!.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +58,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B5509FE92F49A40A03DD850 /* Pods_Color_Blitz_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		174ED99364592FF9A7B52304 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				819B482C745B50BD158E27BF /* Pods_Color_Blitz_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7C03F952250646B400782EE5 = {
 			isa = PBXGroup;
 			children = (
 				7C03F95D250646B400782EE5 /* Color Blitz! */,
 				7C03F95C250646B400782EE5 /* Products */,
+				DF1CEFD9DC4CD1ADE043C9DF /* Pods */,
+				174ED99364592FF9A7B52304 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,15 +95,29 @@
 			isa = PBXGroup;
 			children = (
 				7C03F95E250646B400782EE5 /* AppDelegate.swift */,
-				7C03F960250646B400782EE5 /* SceneDelegate.swift */,
 				7C03F962250646B400782EE5 /* ViewController.swift */,
+				7C76E7D8250929DB005BCDCA /* GameViewController.swift */,
 				7C03F964250646B400782EE5 /* Main.storyboard */,
 				7C03F96A250646B500782EE5 /* Assets.xcassets */,
 				7C03F96C250646B500782EE5 /* LaunchScreen.storyboard */,
 				7C03F96F250646B500782EE5 /* Info.plist */,
 				7C03F967250646B400782EE5 /* Color_Blitz_.xcdatamodeld */,
+				7C03F9782506617C00782EE5 /* GameScene.swift */,
+				7C03F97A2506657800782EE5 /* ColorBlitzScene.swift */,
+				7C76E7CD25090D78005BCDCA /* AGSpriteButton.h */,
+				7C76E7CC25090D77005BCDCA /* AGSpriteButton.m */,
+				7C76E7CB25090D76005BCDCA /* Color Blitz!-Bridging-Header.h */,
 			);
 			path = "Color Blitz!";
+			sourceTree = "<group>";
+		};
+		DF1CEFD9DC4CD1ADE043C9DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				019334267E5CD6A27D43ADF1 /* Pods-Color Blitz!.debug.xcconfig */,
+				C2F71E8F33CA213E9364990F /* Pods-Color Blitz!.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +127,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C03F972250646B500782EE5 /* Build configuration list for PBXNativeTarget "Color Blitz!" */;
 			buildPhases = (
+				785A83E85EACC735ECFD55D1 /* [CP] Check Pods Manifest.lock */,
 				7C03F957250646B400782EE5 /* Sources */,
 				7C03F958250646B400782EE5 /* Frameworks */,
 				7C03F959250646B400782EE5 /* Resources */,
+				7C76E7D325091F22005BCDCA /* Embed Frameworks */,
+				7C76E7CA2508C4E5005BCDCA /* ShellScript */,
+				9984AD7687DE4A98866344B3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -102,6 +156,7 @@
 				TargetAttributes = {
 					7C03F95A250646B400782EE5 = {
 						CreatedOnToolsVersion = 11.7;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -136,14 +191,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		785A83E85EACC735ECFD55D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Color Blitz!-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C76E7CA2508C4E5005BCDCA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ -e \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Skillz.framework/postprocess.sh\" ]; then\n    /bin/sh \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Skillz.framework/postprocess.sh\"\nfi\n";
+		};
+		9984AD7687DE4A98866344B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Color Blitz!/Pods-Color Blitz!-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Color Blitz!/Pods-Color Blitz!-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Color Blitz!/Pods-Color Blitz!-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7C03F957250646B400782EE5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C76E7D9250929DB005BCDCA /* GameViewController.swift in Sources */,
 				7C03F963250646B400782EE5 /* ViewController.swift in Sources */,
 				7C03F95F250646B400782EE5 /* AppDelegate.swift in Sources */,
-				7C03F961250646B400782EE5 /* SceneDelegate.swift in Sources */,
+				7C03F9792506617C00782EE5 /* GameScene.swift in Sources */,
+				7C03F97B2506657800782EE5 /* ColorBlitzScene.swift in Sources */,
+				7C76E7CE25090D78005BCDCA /* AGSpriteButton.m in Sources */,
 				7C03F969250646B400782EE5 /* Color_Blitz_.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,37 +403,46 @@
 		};
 		7C03F973250646B500782EE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 019334267E5CD6A27D43ADF1 /* Pods-Color Blitz!.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QSNS297U74;
 				INFOPLIST_FILE = "Color Blitz!/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chandu.Color-Blitz-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chandu.Color-Blitz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Color Blitz!/Color Blitz!-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		7C03F974250646B500782EE5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2F71E8F33CA213E9364990F /* Pods-Color Blitz!.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QSNS297U74;
 				INFOPLIST_FILE = "Color Blitz!/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chandu.Color-Blitz-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chandu.Color-Blitz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Color Blitz!/Color Blitz!-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

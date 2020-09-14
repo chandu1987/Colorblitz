@@ -27,13 +27,16 @@ class ColorBlitzScene: SKScene {
     
     
     var colors : [UIColor]?
-    let player = SKShapeNode(circleOfRadius: 40)
+    var colorNames = ["Blue","Red","Yellow","Green"]
+    var currentColor:String?
+    var currentNo: UInt32 = 0
+
     var score = 0
     
     var currentRotationDirection = rotationDirection.none
     
     var colorWheel : SKNode?
-    var colorBar : SKShapeNode?
+    var colorBar : SKSpriteNode?
     var button : SKSpriteNode?
     var scoreLabel : SKLabelNode?
     var tipsLabel : SKLabelNode?
@@ -82,23 +85,65 @@ class ColorBlitzScene: SKScene {
 
               colorWheel = obstacleByDuplicatingPath(path, clockwise: true)
               colorWheel!.position = CGPoint(x: size.width/2, y: size.height/2)
+              colorWheel!.zRotation = .pi/4
               addChild(colorWheel!)
 
-              let rotateCircle = SKAction.rotate(byAngle: 0.7, duration: 0.1)
-              colorWheel!.run(rotateCircle)
         
     }
     
     
     func addColorBar(){
-
-        let cgPath = CGPath(roundedRect: CGRect(x: 0, y: 0, width: 300, height: 50), cornerWidth: 20, cornerHeight: 0, transform: nil)
-        colorBar  = SKShapeNode(path:cgPath, centered: false)
+        
+//        let rectangle = CGRect(x: 0, y: 0, width: 300, height: 50)
+//        let path = UIBezierPath(roundedRect: rectangle, cornerRadius: 20)
+//        colorBar  = SKShapeNode(path:path.cgPath, centered: false)
+//       // colorBar!.physicsBody = SKPhysicsBody(rectangleOf: path.cgPath)
+//        colorBar!.physicsBody?.affectedByGravity = false
+//        changeColor()
+//        colorBar!.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+//        colorBar!.zRotation = .pi/2
+//        self.addChild(colorBar!)
+        
+        colorBar = createImage()
         changeColor()
+        colorBar!.colorBlendFactor = 1.0
+        colorBar!.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 300))
         colorBar!.physicsBody?.affectedByGravity = false
-        colorBar!.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        //    colorBar?.anchorPoint = CGPoint(x: 1, y: 1)
-        self.addChild(colorBar!)
+        colorBar!.position = CGPoint(x: self.frame.midX , y: self.frame.midY)
+        colorBar!.anchorPoint = CGPoint(x: 0.5, y: 1.0)
+        addChild(colorBar!)
+      //  colorBar?.zRotation = .pi
+        
+
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        let targetNode = colorWheel!.childNode(withName: "Green")!
+        print("Chandu - \(targetNode.zRotation)")
+        print("Chandu - \(colorBar!.zRotation)")
+        if colorBar!.zRotation == targetNode.zRotation{
+            
+            
+        }
+        
+
+
+
+
+    }
+    
+    func createImage() -> SKSpriteNode{
+            UIGraphicsBeginImageContext(CGSize(width: 50, height: 300))
+            UIColor.white.setFill()
+            let rectangle = CGRect(x: 0, y: 0, width: 50, height: 300)
+            let path = UIBezierPath(roundedRect: rectangle, cornerRadius: 20)
+            path.fill()
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+        
+            let texture = SKTexture(image: image!)
+            return SKSpriteNode(texture: texture)
+
     }
     
     
@@ -106,7 +151,7 @@ class ColorBlitzScene: SKScene {
           scoreLabel = SKLabelNode(fontNamed: "Helvetica")
           scoreLabel!.text = String(score)
           scoreLabel!.fontColor = .white
-          scoreLabel!.horizontalAlignmentMode = .right
+          scoreLabel!.horizontalAlignmentMode = .center
           scoreLabel!.fontSize = 150
           scoreLabel!.position = CGPoint(x: size.width/2, y: colorWheel!.frame.origin.y + 600)
           addChild(scoreLabel!)
@@ -126,8 +171,6 @@ class ColorBlitzScene: SKScene {
     
 
     
-    
-
 
     func obstacleByDuplicatingPath(_ path: UIBezierPath, clockwise: Bool) -> SKNode {
 
@@ -142,51 +185,45 @@ class ColorBlitzScene: SKScene {
             let section = SKShapeNode(path: path.cgPath)
             section.fillColor = colors![i]
             section.strokeColor = colors![i]
+            section.name = colorNames[i]
             section.zRotation = rotationFactor * CGFloat(i);
             container.addChild(section)
         }
         return container
     }
-    
-    
-//    func  addSkillzButton(){
-//
-//       let button = AGSpriteButton(color: UIColor.white, andSize: CGSize(width: 200, height: 60))
-//       button.position = CGPoint(x: size.width/2, y: size.height - 200)
-//       button.addTarget(self, selector: #selector(addSkillz), with: nil, for: .touchUpInside)
-//       button.setLabelWithText("Skillz", andFont: nil, with: UIColor.black)
-//       addChild(button)
-//
-//       }
-    
-    
-//    @objc func addSkillz(){
-//        print("Launching Skillz")
-//        skillz.launch()
-//        print("Starting Match")
-//    }
-    
+        
     
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     
-        
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            
         score = score + 1
         scoreLabel?.text = String(score)
         skillz.updatePlayersCurrentScore(score as NSNumber)
-
-        if score == 20 {
+        
             
-        }
+//        print("Chandu - \(distanceBetweenTwoNodes(first: targetNode.position, second: colorBar!.position))")
+        
+
+//        if colorBar!.intersects(colorWheel!.childNode(withName: currentColor!)!){
+//            print("Chandu - yesssss")
+//        }else{
+//            print("Chandu - Nooooo")
+//        }
+
+        
+    
+//        if score == 20 {
+//
+//        }
         
         changeColor()
         
-        tipsLabel?.isHidden = true
         
         let touch : UITouch = touches.first!
         let touchPosition = touch.location(in: self)
         let newRotationDirection : rotationDirection = touchPosition.x < self.frame.midX ? .clockwise : .counterClockwise
-        
+
         if currentRotationDirection == .none{
             setupRotationWith(direction: newRotationDirection)
             currentRotationDirection = newRotationDirection
@@ -209,12 +246,26 @@ class ColorBlitzScene: SKScene {
     }
 
     func changeColor(){
-     //   colorBar!.color = colors!.randomElement()!
-        let color = colors!.randomElement()!
-        colorBar!.fillColor = color
-        colorBar?.strokeColor = color
-
+        let randomIndex = randomNumber(maximum: UInt32(self.colors!.count))
+        let color = colors![randomIndex]
+        colorBar?.color = color
+     //   colorBar!.fillColor = color
+       // colorBar?.strokeColor = color
+        currentColor = colorNames[randomIndex]
     }
+    
+    func randomNumber(maximum: UInt32) -> Int {
+
+        var randomNumber: UInt32
+        repeat {
+            randomNumber = (arc4random_uniform(maximum))
+        }while currentNo == randomNumber
+
+        currentNo = randomNumber
+
+        return Int(randomNumber)
+    }
+    
 
     func reverseRotation(){
         let oldRotateAction = colorBar!.action(forKey: "rotate")
@@ -240,4 +291,28 @@ class ColorBlitzScene: SKScene {
     }
 
     
+}
+
+
+extension SKSpriteNode {
+    func addTo(parent:SKNode?, withRadius:CGFloat) {
+        guard parent != nil else { return }
+        guard  withRadius>0.0 else {
+            parent!.addChild(self)
+            return
+        }
+        let radiusShape = SKShapeNode.init(rect: CGRect.init(origin: CGPoint.zero, size: size), cornerRadius: withRadius)
+        radiusShape.position = CGPoint.zero
+        radiusShape.lineWidth = 2.0
+        radiusShape.fillColor = UIColor.red
+        radiusShape.strokeColor = UIColor.red
+        radiusShape.zPosition = 2
+        radiusShape.position = CGPoint.zero
+        let cropNode = SKCropNode()
+        cropNode.position = self.position
+        cropNode.zPosition = 3
+        cropNode.addChild(self)
+        cropNode.maskNode = radiusShape
+        parent!.addChild(cropNode)
+    }
 }

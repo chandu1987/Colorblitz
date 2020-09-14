@@ -18,6 +18,7 @@
 		7C03F97B2506657800782EE5 /* ColorBlitzScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03F97A2506657800782EE5 /* ColorBlitzScene.swift */; };
 		7C76E7CE25090D78005BCDCA /* AGSpriteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C76E7CC25090D77005BCDCA /* AGSpriteButton.m */; };
 		7C76E7D9250929DB005BCDCA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C76E7D8250929DB005BCDCA /* GameViewController.swift */; };
+		7CD824B1250E55AF0068B082 /* ClockNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD824B0250E55AF0068B082 /* ClockNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,7 @@
 		7C76E7CC25090D77005BCDCA /* AGSpriteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGSpriteButton.m; sourceTree = "<group>"; };
 		7C76E7CD25090D78005BCDCA /* AGSpriteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGSpriteButton.h; sourceTree = "<group>"; };
 		7C76E7D8250929DB005BCDCA /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		7CD824B0250E55AF0068B082 /* ClockNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockNode.swift; sourceTree = "<group>"; };
 		819B482C745B50BD158E27BF /* Pods_Color_Blitz_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Color_Blitz_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F71E8F33CA213E9364990F /* Pods-Color Blitz!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color Blitz!.release.xcconfig"; path = "Target Support Files/Pods-Color Blitz!/Pods-Color Blitz!.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 				7C76E7CD25090D78005BCDCA /* AGSpriteButton.h */,
 				7C76E7CC25090D77005BCDCA /* AGSpriteButton.m */,
 				7C76E7CB25090D76005BCDCA /* Color Blitz!-Bridging-Header.h */,
+				7CD824B0250E55AF0068B082 /* ClockNode.swift */,
 			);
 			path = "Color Blitz!";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				7C03F963250646B400782EE5 /* ViewController.swift in Sources */,
 				7C03F95F250646B400782EE5 /* AppDelegate.swift in Sources */,
 				7C03F9792506617C00782EE5 /* GameScene.swift in Sources */,
+				7CD824B1250E55AF0068B082 /* ClockNode.swift in Sources */,
 				7C03F97B2506657800782EE5 /* ColorBlitzScene.swift in Sources */,
 				7C76E7CE25090D78005BCDCA /* AGSpriteButton.m in Sources */,
 				7C03F969250646B400782EE5 /* Color_Blitz_.xcdatamodeld in Sources */,
